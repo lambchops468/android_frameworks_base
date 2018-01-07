@@ -267,13 +267,13 @@ public final class ActivityManagerService extends ActivityManagerNative
 
     // How long we wait for a launched process to attach to the activity manager
     // before we decide it's never going to come up for real.
-    static final int PROC_START_TIMEOUT = 10*1000;
+    static final int PROC_START_TIMEOUT = 60*1000;
 
     // How long we wait for a launched process to attach to the activity manager
     // before we decide it's never going to come up for real, when the process was
     // started with a wrapper for instrumentation (such as Valgrind) because it
     // could take much longer than usual.
-    static final int PROC_START_TIMEOUT_WITH_WRAPPER = 300*1000;
+    static final int PROC_START_TIMEOUT_WITH_WRAPPER = 1800*1000;
 
     // How long to wait after going idle before forcing apps to GC.
     static final int GC_TIMEOUT = 5*1000;
@@ -300,14 +300,14 @@ public final class ActivityManagerService extends ActivityManagerNative
     static final int CPU_MIN_CHECK_DURATION = (DEBUG_POWER_QUICK ? 1 : 5) * 60*1000;
 
     // How long we allow a receiver to run before giving up on it.
-    static final int BROADCAST_FG_TIMEOUT = 10*1000;
-    static final int BROADCAST_BG_TIMEOUT = 60*1000;
+    static final int BROADCAST_FG_TIMEOUT = 60*1000;
+    static final int BROADCAST_BG_TIMEOUT = 360*1000;
 
     // How long we wait until we timeout on key dispatching.
-    static final int KEY_DISPATCHING_TIMEOUT = 5*1000;
+    static final int KEY_DISPATCHING_TIMEOUT = 30*1000;
 
     // How long we wait until we timeout on key dispatching during instrumentation.
-    static final int INSTRUMENTATION_KEY_DISPATCHING_TIMEOUT = 60*1000;
+    static final int INSTRUMENTATION_KEY_DISPATCHING_TIMEOUT = 360*1000;
 
     // Amount of time we wait for observers to handle a user switch before
     // giving up on them and unfreezing the screen.

@@ -273,7 +273,7 @@ public class WindowManagerService extends IWindowManager.Stub
     private static final int INPUT_DEVICES_READY_FOR_SAFE_MODE_DETECTION_TIMEOUT_MILLIS = 1000;
 
     // Default input dispatching timeout in nanoseconds.
-    static final long DEFAULT_INPUT_DISPATCHING_TIMEOUT_NANOS = 5000 * 1000000L;
+    static final long DEFAULT_INPUT_DISPATCHING_TIMEOUT_NANOS = 30000 * 1000000L;
 
     /** Minimum value for createStack and resizeStack weight value */
     public static final float STACK_WEIGHT_MIN = 0.2f;

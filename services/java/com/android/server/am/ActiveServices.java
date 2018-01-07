@@ -70,18 +70,18 @@ public final class ActiveServices {
     static final String TAG_MU = ActivityManagerService.TAG_MU;
 
     // How long we wait for a service to finish executing.
-    static final int SERVICE_TIMEOUT = 20*1000;
+    static final int SERVICE_TIMEOUT = 120*1000;
 
     // How long we wait for a service to finish executing.
     static final int SERVICE_BACKGROUND_TIMEOUT = SERVICE_TIMEOUT * 10;
 
     // How long a service needs to be running until restarting its process
     // is no longer considered to be a relaunch of the service.
-    static final int SERVICE_RESTART_DURATION = 1*1000;
+    static final int SERVICE_RESTART_DURATION = 6*1000;
 
     // How long a service needs to be running until it will start back at
     // SERVICE_RESTART_DURATION after being killed.
-    static final int SERVICE_RESET_RUN_DURATION = 60*1000;
+    static final int SERVICE_RESET_RUN_DURATION = 360*1000;
 
     // Multiplying factor to increase restart duration time by, for each time
     // a service is killed before it has run for SERVICE_RESET_RUN_DURATION.
@@ -90,7 +90,7 @@ public final class ActiveServices {
     // The minimum amount of time between restarting services that we allow.
     // That is, when multiple services are restarting, we won't allow each
     // to restart less than this amount of time from the last one.
-    static final int SERVICE_MIN_RESTART_TIME_BETWEEN = 10*1000;
+    static final int SERVICE_MIN_RESTART_TIME_BETWEEN = 60*1000;
 
     // Maximum amount of time for there to be no activity on a service before
     // we consider it non-essential and allow its process to go on the
@@ -99,7 +99,7 @@ public final class ActiveServices {
 
     // How long we wait for a background started service to stop itself before
     // allowing the next pending start to run.
-    static final int BG_START_TIMEOUT = 15*1000;
+    static final int BG_START_TIMEOUT = 90*1000;
 
     final ActivityManagerService mAm;
 
